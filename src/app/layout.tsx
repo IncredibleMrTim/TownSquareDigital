@@ -24,7 +24,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.townsquaredigital.co.uk"),
   title: "Town Square Digital — Affordable Websites for Small Businesses",
   description:
-    "This platform offers affordable website building services tailored for small businesses, emphasizing quick turnaround times and exceptional support.",
+    "Affordable, professional websites for tradespeople and small businesses across the UK. Live in days, not weeks — no hidden fees.",
+  alternates: {
+    canonical: "/",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

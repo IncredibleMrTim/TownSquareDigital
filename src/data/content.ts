@@ -16,6 +16,138 @@ import type {
   IWorkExample,
 } from "@/types/interfaces";
 
+export const ORGANIZATION_SCHEMA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "#organization",
+      name: "Town Square Digital",
+      email: "mailto:hello@townsquaredigital.co.uk",
+      url: "https://www.townsquaredigital.co.uk",
+      description:
+        "Town Square Digital designs and builds affordable, professional websites for tradespeople and small businesses across the UK.",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "#website",
+      url: "https://www.townsquaredigital.co.uk",
+      name: "Town Square Digital",
+      publisher: {
+        "@id": "#organization",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.townsquaredigital.co.uk",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "#faqpage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What digital marketing services does Town Square Digital offer for small businesses?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Town Square Digital specializes in small business web design and local SEO. We build fast, mobile-friendly websites for local businesses that are engineered to rank on Google, attract local customers, and convert traffic into real leads.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How can small businesses in the UK benefit from Town Square Digital's services?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Small businesses in the UK can benefit from tailored digital marketing strategies that increase online visibility, attract more customers, and improve sales through Town Square Digital's expert services.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I place an order with Town Square Digital?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You can place an order by contacting Town Square Digital via email at hello@townsquaredigital.co.uk or direct from our website.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is Town Square Digital suitable for startups and small enterprises?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, Town Square Digital specializes in providing approachable and affordable digital marketing solutions ideal for startups and small enterprises.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does Town Square Digital provide customized marketing plans?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, they tailor digital marketing strategies to meet the unique needs and goals of each small business client.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How does Town Square Digital compare to other digital marketing agencies in the UK?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Town Square Digital focuses specifically on small businesses with an approachable and affordable service model, which may differ from larger agencies that serve bigger clients or offer less personalized attention.",
+          },
+        },
+      ],
+    },
+    {
+      "@type": "Product",
+      "@id": "#product",
+      name: "Town Square Digital | Digital Marketing for Small Businesses UK",
+      description:
+        "Town Square Digital provides approachable and affordable digital marketing services tailored specifically for small businesses in the UK. Their offerings include online marketing strategies designed to help small businesses grow and succeed in a competitive digital landscape.",
+      offers: {
+        "@type": "Offer",
+        url: "mailto:hello@townsquaredigital.co.uk",
+        availability: "https://schema.org/InStock",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "GBP",
+        },
+      },
+      headline: "Digital Marketing Services for Small Businesses",
+      alternativeHeadline:
+        "Affordable Digital Marketing Solutions | Grow Your Small Business Online | Contact Town Square Digital Today",
+      url: "https://www.townsquaredigital.co.uk",
+      mainEntity: {
+        "@id": "#faqpage",
+      },
+    },
+  ],
+};
+
+export const WORK_BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.townsquaredigital.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Our Work",
+      item: "https://www.townsquaredigital.co.uk/work",
+    },
+  ],
+};
+
 export const NAV_LINKS: INavLink[] = [
   { label: "Services", href: "/#services" },
   { label: "Pricing", href: "/#pricing" },

@@ -7,11 +7,16 @@ import HowItWorks from "@/components/HowItWorks"
 import Navbar from "@/components/Navbar"
 import Pricing from "@/components/Pricing"
 import Services from "@/components/Services"
+import { ORGANIZATION_SCHEMA } from "@/data/content"
 // import Testimonials from "@/components/Testimonials"
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
+      />
       <Navbar />
       <main>
         <Hero />

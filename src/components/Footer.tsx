@@ -34,6 +34,21 @@ export default function Footer() {
             ))}
           </ul>
         </div>
+        <div>
+          <div className="mb-3 text-sm font-medium text-white">Contact</div>
+          <p className="max-w-xs text-sm leading-relaxed">
+            Contact Town Square Digital today to place your order or learn more about our services.
+          </p>
+          <p className="mt-2 text-sm">
+            Email:{" "}
+            <a
+              href="mailto:hello@townsquaredigital.co.uk"
+              className="transition-colors hover:text-white"
+            >
+              hello@townsquaredigital.co.uk
+            </a>
+          </p>
+        </div>
       </div>
       <div className="mx-auto mt-10 flex max-w-6xl flex-col justify-between gap-2 border-t border-brand-navy pt-6 text-xs text-[#4a6080] md:flex-row">
         <span>© 2025 Town Square Digital. All rights reserved.</span>
