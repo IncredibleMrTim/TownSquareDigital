@@ -1,6 +1,9 @@
 import type { Metadata } from "next"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import { Lora, Outfit } from "next/font/google"
 import "./globals.css"
+
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 const lora = Lora({
   subsets: ["latin"],
@@ -27,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${lora.variable} ${outfit.variable}`}>
       <body>{children}</body>
+      {gaMeasurementId && <GoogleAnalytics gaId={gaMeasurementId} />}
     </html>
   )
 }
