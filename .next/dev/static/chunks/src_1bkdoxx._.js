@@ -751,6 +751,12 @@ const CONTACT_FORM_FIELDS = [
         placeholder: "John Smith"
     },
     {
+        id: "email",
+        label: "Your email",
+        type: "email",
+        placeholder: "john@smithplumbing.co.uk"
+    },
+    {
         id: "business",
         label: "Business name",
         type: "text",

@@ -607,6 +607,7 @@
     --color-brand-navy: #1b3358;
     --color-brand-navy-light: #274b80;
     --color-brand-brick: #c0522a;
+    --color-brand-brick-dark: #a0421f;
     --color-cream: #faf8f2;
     --color-cream-dark: #f0ead8;
     --color-stone: #6b6560;
@@ -1577,6 +1578,10 @@
     color: var(--color-brand-brick);
   }
 
+  .text-brand-brick-dark {
+    color: var(--color-brand-brick-dark);
+  }
+
   .text-brand-navy {
     color: var(--color-brand-navy);
   }
@@ -1723,6 +1728,10 @@
   .focus\:outline-none:focus {
     --tw-outline-style: none;
     outline-style: none;
+  }
+
+  .disabled\:opacity-60:disabled {
+    opacity: .6;
   }
 
   @media (min-width: 40rem) {

@@ -1,0 +1,89 @@
+"use server"
+
+import nodemailer from "nodemailer"
+import type { IContactFormValues, IContactSubmissionResult } from "@/types/interfaces"
+
+const GENERIC_ERROR_MESSAGE = "Something went wrong sending your message. Please try again or call us directly."
+
+function buildEmailBody(formValues: IContactFormValues): string {
+  return [
+    `Name: ${formValues.name}`,
+    `Email: ${formValues.email}`,
+    `Business: ${formValues.business}`,
+    `Phone: ${formValues.phone}`,
+    "",
+    formValues.message,
+  ].join("\n")
+}
+
+function buildConfirmationEmailBody(formValues: IContactFormValues): string {
+  return [
+    `Hi ${formValues.name},`,
+    "",
+    "Thanks for getting in touch with Town Square Digital — I've received your message and will come back to you within one working day, usually much sooner.",
+    "",
+    "Here's a copy of what you sent:",
+    "",
+    formValues.message,
+    "",
+    "Speak soon,",
+    "Town Square Digital",
+  ].join("\n")
+}
+
+function isMissingRequiredField(formValues: IContactFormValues): boolean {
+  return !formValues.name.trim() || !formValues.email.trim() || !formValues.message.trim()
+}
+
+export async function sendContactMessage(formValues: IContactFormValues): Promise<IContactSubmissionResult> {
+  if (isMissingRequiredField(formValues)) {
+    return { isSuccess: false, errorMessage: "Please fill in your name, email, and message." }
+  }
+
+  const smtpHost = process.env.SMTP_HOST
+  const smtpUser = process.env.SMTP_USER
+  const smtpPassword = process.env.SMTP_PASSWORD
+
+  if (!smtpHost || !smtpUser || !smtpPassword) {
+    console.error("sendContactMessage: missing SMTP_HOST, SMTP_USER, or SMTP_PASSWORD env vars")
+    return { isSuccess: false, errorMessage: GENERIC_ERROR_MESSAGE }
+  }
+
+  const transporter = nodemailer.createTransport({
+    host: smtpHost,
+    port: Number(process.env.SMTP_PORT ?? 587),
+    secure: process.env.SMTP_SECURE === "true",
+    auth: {
+      user: smtpUser,
+      pass: smtpPassword,
+    },
+  })
+
+  const fromEmail = process.env.CONTACT_FROM_EMAIL ?? smtpUser
+
+  try {
+    await transporter.sendMail({
+      from: fromEmail,
+      to: process.env.CONTACT_TO_EMAIL ?? "hello@townsquaredigital.co.uk",
+      replyTo: formValues.email,
+      subject: `New quote request from ${formValues.name}`,
+      text: buildEmailBody(formValues),
+    })
+  } catch (error) {
+    console.error("sendContactMessage:", error)
+    return { isSuccess: false, errorMessage: GENERIC_ERROR_MESSAGE }
+  }
+
+  try {
+    await transporter.sendMail({
+      from: fromEmail,
+      to: formValues.email,
+      subject: "We've received your message — Town Square Digital",
+      text: buildConfirmationEmailBody(formValues),
+    })
+  } catch (error) {
+    console.error("sendContactMessage: confirmation email failed:", error)
+  }
+
+  return { isSuccess: true }
+}

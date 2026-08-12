@@ -38,7 +38,7 @@ export interface IContactDetail {
 }
 
 export interface IContactFormField {
-  id: "name" | "business" | "phone"
+  id: "name" | "email" | "business" | "phone"
   label: string
   type: string
   placeholder: string
@@ -46,9 +46,15 @@ export interface IContactFormField {
 
 export interface IContactFormValues {
   name: string
+  email: string
   business: string
   phone: string
   message: string
+}
+
+export interface IContactSubmissionResult {
+  isSuccess: boolean
+  errorMessage?: string
 }
 
 export interface IAboutStat {

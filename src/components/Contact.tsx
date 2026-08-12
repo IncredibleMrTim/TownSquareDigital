@@ -1,19 +1,38 @@
 "use client"
 
 import { useState } from "react"
+import { sendContactMessage } from "@/app/actions/contact"
 import { CONTACT_DETAILS, CONTACT_FORM_FIELDS } from "@/data/content"
 import type { IContactFormValues } from "@/types/interfaces"
 import LogoMark from "./LogoMark"
 
-const INITIAL_FORM_VALUES: IContactFormValues = { name: "", business: "", phone: "", message: "" }
+const INITIAL_FORM_VALUES: IContactFormValues = {
+  name: "",
+  email: "",
+  business: "",
+  phone: "",
+  message: "",
+}
 
 export default function Contact() {
   const [formValues, setFormValues] = useState<IContactFormValues>(INITIAL_FORM_VALUES)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSending, setIsSending] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
-  function handleSubmit(event: React.FormEvent) {
+  async function handleSubmit(event: React.FormEvent) {
     event.preventDefault()
-    setIsSubmitted(true)
+    setIsSending(true)
+    setErrorMessage(null)
+
+    const result = await sendContactMessage(formValues)
+
+    setIsSending(false)
+    if (result.isSuccess) {
+      setIsSubmitted(true)
+    } else {
+      setErrorMessage(result.errorMessage ?? "Something went wrong. Please try again.")
+    }
   }
 
   return (
@@ -88,11 +107,13 @@ export default function Contact() {
                   className="w-full resize-none rounded-lg border border-[#d0c8b8] px-4 py-2.5 text-sm text-ink transition-colors focus:outline-none"
                 />
               </div>
+              {errorMessage && <p className="text-sm text-brand-brick-dark">{errorMessage}</p>}
               <button
                 type="submit"
-                className="w-full rounded-lg bg-brand-brick py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                disabled={isSending}
+                className="w-full rounded-lg bg-brand-brick py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
               >
-                Send my free quote request →
+                {isSending ? "Sending…" : "Send my free quote request →"}
               </button>
               <p className="text-center text-xs text-muted">No obligation. I&apos;ll never spam or hard-sell.</p>
             </form>

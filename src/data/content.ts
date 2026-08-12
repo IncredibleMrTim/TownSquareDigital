@@ -166,6 +166,12 @@ export const CONTACT_DETAILS: IContactDetail[] = [
 export const CONTACT_FORM_FIELDS: IContactFormField[] = [
   { id: "name", label: "Your name", type: "text", placeholder: "John Smith" },
   {
+    id: "email",
+    label: "Your email",
+    type: "email",
+    placeholder: "john@smithplumbing.co.uk",
+  },
+  {
     id: "business",
     label: "Business name",
     type: "text",
