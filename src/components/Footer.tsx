@@ -1,10 +1,6 @@
 import { NAV_LINKS } from "@/data/content"
 import LogoMark from "./LogoMark"
 
-function toAnchorHref(navLink: string): string {
-  return `#${navLink.toLowerCase().replace(/\s+/g, "-")}`
-}
-
 export default function Footer() {
   return (
     <footer className="bg-[#0f1e33] px-6 py-12 text-navy-mist">
@@ -30,9 +26,9 @@ export default function Footer() {
           <div className="mb-3 text-sm font-medium text-white">Navigate</div>
           <ul className="space-y-2 text-sm">
             {NAV_LINKS.map((navLink) => (
-              <li key={navLink}>
-                <a href={toAnchorHref(navLink)} className="transition-colors hover:text-white">
-                  {navLink}
+              <li key={navLink.label}>
+                <a href={navLink.href} className="transition-colors hover:text-white">
+                  {navLink.label}
                 </a>
               </li>
             ))}

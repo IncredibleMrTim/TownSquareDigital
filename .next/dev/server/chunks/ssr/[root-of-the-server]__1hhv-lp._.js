@@ -383,9 +383,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$LogoMar
 ;
 ;
 ;
-function toAnchorHref(navLink) {
-    return `#${navLink.toLowerCase().replace(/\s+/g, "-")}`;
-}
 function Footer() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
         className: "bg-[#0f1e33] px-6 py-12 text-navy-mist",
@@ -403,7 +400,7 @@ function Footer() {
                                         variant: "brick"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Footer.tsx",
-                                        lineNumber: 14,
+                                        lineNumber: 10,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -413,7 +410,7 @@ function Footer() {
                                                 children: "Town Square"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 16,
+                                                lineNumber: 12,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -421,19 +418,19 @@ function Footer() {
                                                 children: "Digital"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 19,
+                                                lineNumber: 15,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Footer.tsx",
-                                        lineNumber: 15,
+                                        lineNumber: 11,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Footer.tsx",
-                                lineNumber: 13,
+                                lineNumber: 9,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -441,7 +438,7 @@ function Footer() {
                                 children: "Affordable, professional websites for tradespeople and small businesses across the UK."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Footer.tsx",
-                                lineNumber: 24,
+                                lineNumber: 20,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -449,13 +446,13 @@ function Footer() {
                                 children: "Where local business meets digital."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Footer.tsx",
-                                lineNumber: 27,
+                                lineNumber: 23,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Footer.tsx",
-                        lineNumber: 12,
+                        lineNumber: 8,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -465,41 +462,41 @@ function Footer() {
                                 children: "Navigate"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Footer.tsx",
-                                lineNumber: 30,
+                                lineNumber: 26,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                 className: "space-y-2 text-sm",
                                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$content$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["NAV_LINKS"].map((navLink)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: toAnchorHref(navLink),
+                                            href: navLink.href,
                                             className: "transition-colors hover:text-white",
-                                            children: navLink
+                                            children: navLink.label
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 34,
+                                            lineNumber: 30,
                                             columnNumber: 17
                                         }, this)
-                                    }, navLink, false, {
+                                    }, navLink.label, false, {
                                         fileName: "[project]/src/components/Footer.tsx",
-                                        lineNumber: 33,
+                                        lineNumber: 29,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Footer.tsx",
-                                lineNumber: 31,
+                                lineNumber: 27,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Footer.tsx",
-                        lineNumber: 29,
+                        lineNumber: 25,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Footer.tsx",
-                lineNumber: 11,
+                lineNumber: 7,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -509,26 +506,26 @@ function Footer() {
                         children: "© 2025 Town Square Digital. All rights reserved."
                     }, void 0, false, {
                         fileName: "[project]/src/components/Footer.tsx",
-                        lineNumber: 43,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$0_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: "Built with care for UK small businesses."
                     }, void 0, false, {
                         fileName: "[project]/src/components/Footer.tsx",
-                        lineNumber: 44,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Footer.tsx",
-                lineNumber: 42,
+                lineNumber: 38,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/Footer.tsx",
-        lineNumber: 10,
+        lineNumber: 6,
         columnNumber: 5
     }, this);
 }
@@ -1457,14 +1454,35 @@ __turbopack_context__.s([
     "STEPS",
     ()=>STEPS,
     "TESTIMONIALS",
-    ()=>TESTIMONIALS
+    ()=>TESTIMONIALS,
+    "WORK_EXAMPLES",
+    ()=>WORK_EXAMPLES
 ]);
 const NAV_LINKS = [
-    "Services",
-    "Pricing",
-    "How It Works",
-    "About",
-    "Contact"
+    {
+        label: "Services",
+        href: "/#services"
+    },
+    {
+        label: "Pricing",
+        href: "/#pricing"
+    },
+    {
+        label: "How It Works",
+        href: "/#how-it-works"
+    },
+    {
+        label: "Our Work",
+        href: "/work"
+    },
+    {
+        label: "About",
+        href: "/#about"
+    },
+    {
+        label: "Contact",
+        href: "/#contact"
+    }
 ];
 const HERO_BADGES = [
     "No hidden fees",
@@ -1641,17 +1659,19 @@ const CONTACT_FORM_FIELDS = [
     }
 ];
 const ABOUT_STATS = [
-    {
-        value: "200+",
-        label: "sites built"
-    },
-    {
-        value: "4.9★",
-        label: "avg. rating"
-    },
+    // { value: "200+", label: "sites built" },
+    // { value: "4.9★", label: "avg. rating" },
     {
         value: "24h",
         label: "support"
+    }
+];
+const WORK_EXAMPLES = [
+    {
+        name: "Tauranga Electroplaters",
+        url: "https://tze-web.vercel.app/",
+        description: "Zinc electroplating specialist in Tauranga — site built to showcase their process and bring in trade enquiries.",
+        image: "/work-tauranga-electroplaters-hero.webp"
     }
 ];
 }),
@@ -1662,10 +1682,19 @@ __turbopack_context__.s([
     "IMG_HAPPY_WORKER",
     ()=>IMG_HAPPY_WORKER,
     "IMG_HERO",
-    ()=>IMG_HERO
+    ()=>IMG_HERO,
+    "IMG_OUR_WORK_TST",
+    ()=>IMG_OUR_WORK_TST,
+    "IMG_OUR_WORK_TZE",
+    ()=>IMG_OUR_WORK_TZE,
+    "IMG_OUR_WORK_WIZZ",
+    ()=>IMG_OUR_WORK_WIZZ
 ]);
 const IMG_HERO = "/hero_1_1x.webp";
 const IMG_HAPPY_WORKER = "/happy_worker_1_1x.webp";
+const IMG_OUR_WORK_TZE = "/ourWork/tze_1x.webp";
+const IMG_OUR_WORK_WIZZ = "/ourWork/wizz_1x.webp";
+const IMG_OUR_WORK_TST = "/ourWork/tst_1x.webp";
 }),
 ];
 

@@ -1,20 +1,28 @@
+import {
+  IMG_OUR_WORK_TST,
+  IMG_OUR_WORK_TZE,
+  IMG_OUR_WORK_WIZZ,
+} from "@/lib/theme";
 import type {
   IAboutStat,
   IContactDetail,
   IContactFormField,
   IFeature,
+  INavLink,
   IPricingPlan,
   IService,
   IStep,
   ITestimonial,
+  IWorkExample,
 } from "@/types/interfaces";
 
-export const NAV_LINKS = [
-  "Services",
-  "Pricing",
-  "How It Works",
-  "About",
-  "Contact",
+export const NAV_LINKS: INavLink[] = [
+  { label: "Services", href: "/#services" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Our Work", href: "/work" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const HERO_BADGES = [
@@ -186,7 +194,31 @@ export const CONTACT_FORM_FIELDS: IContactFormField[] = [
 ];
 
 export const ABOUT_STATS: IAboutStat[] = [
-  { value: "200+", label: "sites built" },
-  { value: "4.9★", label: "avg. rating" },
+  // { value: "200+", label: "sites built" },
+  // { value: "4.9★", label: "avg. rating" },
   { value: "24h", label: "support" },
+];
+
+// TODO: add more real client sites here as they go live.
+export const WORK_EXAMPLES: IWorkExample[] = [
+  {
+    name: "Tauranga Electroplaters",
+    url: "https://tze-web.vercel.app/",
+    description:
+      "Zinc electroplating specialist in Tauranga — site built to showcase their process and bring in trade enquiries.",
+    image: IMG_OUR_WORK_TZE,
+  },
+  {
+    name: "Wizzington Moos UK",
+    description:
+      "Dancewear and pageant couture specialist in the UK — site built to showcase their costumes and bring in performer enquiries.",
+    image: IMG_OUR_WORK_WIZZ,
+  },
+  {
+    name: "Tim Smart Technology",
+    url: "https://timsmarttechnology.co.uk",
+    description:
+      "Frontend software engineer consultant — site built to showcase experience and bring in contract enquiries.",
+    image: IMG_OUR_WORK_TST,
+  },
 ];
