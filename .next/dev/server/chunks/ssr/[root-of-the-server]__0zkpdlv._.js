@@ -1640,8 +1640,8 @@ __turbopack_context__.s([
     "IMG_HERO",
     ()=>IMG_HERO
 ]);
-const IMG_HERO = "/hero.jpg";
-const IMG_HAPPY_WORKER = "/happy_worker.jpg";
+const IMG_HERO = "/hero_1_1x.webp";
+const IMG_HAPPY_WORKER = "/happy_worker_1_1x.webp";
 }),
 ];
 
