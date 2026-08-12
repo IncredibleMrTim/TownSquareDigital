@@ -7,7 +7,7 @@ import HowItWorks from "@/components/HowItWorks"
 import Navbar from "@/components/Navbar"
 import Pricing from "@/components/Pricing"
 import Services from "@/components/Services"
-import Testimonials from "@/components/Testimonials"
+// import Testimonials from "@/components/Testimonials"
 
 export default function HomePage() {
   return (
@@ -19,7 +19,7 @@ export default function HomePage() {
         <Services />
         <HowItWorks />
         <Pricing />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <About />
         <Contact />
       </main>
