@@ -21,7 +21,7 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://town-square-digital-tim-smart-technology.vercel.app"),
+  metadataBase: new URL("https://www.townsquaredigital.co.uk"),
   title: "Town Square Digital — Affordable Websites for Small Businesses",
   description:
     "This platform offers affordable website building services tailored for small businesses, emphasizing quick turnaround times and exceptional support.",
