@@ -21,19 +21,35 @@ export const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "#organization",
       name: "Town Square Digital",
+      alternateName: "Town Square Digital UK",
       email: "mailto:hello@townsquaredigital.co.uk",
+      telephone: "+447824153228",
       url: "https://www.townsquaredigital.co.uk",
+      logo: "https://www.townsquaredigital.co.uk/logo.png",
+      image: "https://www.townsquaredigital.co.uk/logo.png",
       description:
         "Town Square Digital designs and builds affordable, professional websites for tradespeople and small businesses across the UK.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Gosport",
+        addressRegion: "Hampshire",
+        addressCountry: "GB",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "United Kingdom",
+      },
+      sameAs: ["https://www.facebook.com/townsquaredigital.local"],
     },
     {
       "@type": "WebSite",
       "@id": "#website",
       url: "https://www.townsquaredigital.co.uk",
       name: "Town Square Digital",
+      inLanguage: "en-GB",
       publisher: {
         "@id": "#organization",
       },

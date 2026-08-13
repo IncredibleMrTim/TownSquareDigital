@@ -20,13 +20,30 @@ const outfit = Outfit({
   display: "swap",
 })
 
+const SITE_TITLE =
+  "Town Square Digital UK — Affordable Websites for Tradespeople & Small Businesses"
+const SITE_DESCRIPTION =
+  "UK web design for tradespeople and small businesses. Affordable, professional websites live in days, not weeks — no hidden fees, no agency contracts."
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.townsquaredigital.co.uk"),
-  title: "Town Square Digital — Affordable Websites for Small Businesses",
-  description:
-    "Affordable, professional websites for tradespeople and small businesses across the UK. Live in days, not weeks — no hidden fees.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+    siteName: "Town Square Digital",
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
 }
 
