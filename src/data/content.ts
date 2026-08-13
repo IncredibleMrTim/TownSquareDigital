@@ -2,7 +2,7 @@ import {
   IMG_OUR_WORK_TST,
   IMG_OUR_WORK_TZE,
   IMG_OUR_WORK_WIZZ,
-} from "@/lib/theme";
+} from "@/lib/theme"
 import type {
   IAboutStat,
   IContactDetail,
@@ -14,7 +14,7 @@ import type {
   IStep,
   ITestimonial,
   IWorkExample,
-} from "@/types/interfaces";
+} from "@/types/interfaces"
 
 export const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
@@ -107,7 +107,8 @@ export const ORGANIZATION_SCHEMA = {
       "@type": "Product",
       "@id": "#product-starter",
       name: "Starter Website Package",
-      description: "Perfect for getting online fast. Up to 4 pages, mobile-friendly design, contact form, and Google Maps integration.",
+      description:
+        "Perfect for getting online fast. Up to 4 pages, mobile-friendly design, contact form, and Google Maps integration.",
       url: "https://www.townsquaredigital.co.uk/#pricing",
       offers: {
         "@type": "Offer",
@@ -121,7 +122,8 @@ export const ORGANIZATION_SCHEMA = {
       "@type": "Product",
       "@id": "#product-professional",
       name: "Professional Website Package",
-      description: "Everything you need to look great and get found. Up to 8 pages, custom design, SEO setup, and Google My Business listing.",
+      description:
+        "Everything you need to look great and get found. Up to 8 pages, custom design, SEO setup, and Google My Business listing.",
       url: "https://www.townsquaredigital.co.uk/#pricing",
       offers: {
         "@type": "Offer",
@@ -135,7 +137,8 @@ export const ORGANIZATION_SCHEMA = {
       "@type": "Product",
       "@id": "#product-care-plan",
       name: "Care Plan",
-      description: "Your site looked after, every single month. Managed hosting, unlimited small content updates, and monthly site health checks.",
+      description:
+        "Your site looked after, every single month. Managed hosting, unlimited small content updates, and monthly site health checks.",
       url: "https://www.townsquaredigital.co.uk/#pricing",
       offers: {
         "@type": "Offer",
@@ -146,7 +149,7 @@ export const ORGANIZATION_SCHEMA = {
       },
     },
   ],
-};
+}
 
 export const WORK_BREADCRUMB_SCHEMA = {
   "@context": "https://schema.org",
@@ -165,7 +168,7 @@ export const WORK_BREADCRUMB_SCHEMA = {
       item: "https://www.townsquaredigital.co.uk/work",
     },
   ],
-};
+}
 
 export const NAV_LINKS: INavLink[] = [
   { label: "Services", href: "/#services" },
@@ -174,13 +177,13 @@ export const NAV_LINKS: INavLink[] = [
   { label: "Our Work", href: "/work" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#contact" },
-];
+]
 
 export const HERO_BADGES = [
   "No hidden fees",
   "Live in days, not weeks",
   "5★ support",
-];
+]
 
 export const FEATURES: IFeature[] = [
   {
@@ -198,7 +201,7 @@ export const FEATURES: IFeature[] = [
     title: "You deal with me, directly",
     body: "No helpdesk tickets, no account managers, no being passed around. You speak to me — the person who actually builds your site. If something needs changing, just ask. I'm not going to charge you for every small tweak.",
   },
-];
+]
 
 export const SERVICES: IService[] = [
   {
@@ -225,7 +228,7 @@ export const SERVICES: IService[] = [
     name: "Ongoing Care",
     desc: "Monthly plans so your site stays fast, secure, and current.",
   },
-];
+]
 
 export const STEPS: IStep[] = [
   {
@@ -243,7 +246,7 @@ export const STEPS: IStep[] = [
     title: "Go live",
     body: "I handle the technical side — hosting, domain setup, everything. Your site goes live and starts working for you.",
   },
-];
+]
 
 export const TESTIMONIALS: ITestimonial[] = [
   {
@@ -267,7 +270,7 @@ export const TESTIMONIALS: ITestimonial[] = [
     trade: "Builder & Decorator, Leeds",
     initials: "TR",
   },
-];
+]
 
 export const PRICING: IPricingPlan[] = [
   {
@@ -314,41 +317,50 @@ export const PRICING: IPricingPlan[] = [
     ],
     highlight: false,
   },
-];
+]
 
 export const CONTACT_DETAILS: IContactDetail[] = [
   { icon: "📞", label: "Phone", value: "07824 153 228" },
   { icon: "✉️", label: "Email", value: "hello@townsquaredigital.co.uk" },
   { icon: "🕐", label: "Hours", value: "Mon–Fri, 8am–6pm" },
-];
+]
 
 export const CONTACT_FORM_FIELDS: IContactFormField[] = [
-  { id: "name", label: "Your name", type: "text", placeholder: "John Smith" },
+  {
+    id: "name",
+    label: "Your name",
+    type: "text",
+    placeholder: "John Smith",
+    isRequired: true,
+  },
   {
     id: "email",
     label: "Your email",
     type: "email",
     placeholder: "john@smithplumbing.co.uk",
+    isRequired: true,
   },
   {
     id: "business",
     label: "Business name",
     type: "text",
     placeholder: "Smith Plumbing Ltd",
+    isRequired: false,
   },
   {
     id: "phone",
     label: "Phone number",
     type: "tel",
     placeholder: "07700 000000",
+    isRequired: false,
   },
-];
+]
 
 export const ABOUT_STATS: IAboutStat[] = [
   // { value: "200+", label: "sites built" },
   // { value: "4.9★", label: "avg. rating" },
   { value: "24h", label: "support" },
-];
+]
 
 // TODO: add more real client sites here as they go live.
 export const WORK_EXAMPLES: IWorkExample[] = [
@@ -372,4 +384,4 @@ export const WORK_EXAMPLES: IWorkExample[] = [
       "Frontend software engineer consultant — site built to showcase experience and bring in contract enquiries.",
     image: IMG_OUR_WORK_TST,
   },
-];
+]
