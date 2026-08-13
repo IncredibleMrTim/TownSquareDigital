@@ -48,11 +48,19 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block h-0.5 bg-ink transition-all ${isMenuOpen ? "translate-y-1 rotate-45" : ""}`}
+            className={`block h-0.5 bg-ink transition-all ${
+              isMenuOpen ? "translate-y-1 rotate-45" : ""
+            }`}
           />
-          <span className={`block h-0.5 bg-ink transition-all ${isMenuOpen ? "opacity-0" : "opacity-100"}`} />
           <span
-            className={`block h-0.5 bg-ink transition-all ${isMenuOpen ? "-translate-y-1 -rotate-45" : ""}`}
+            className={`block h-0.5 bg-ink transition-all ${
+              isMenuOpen ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`block h-0.5 bg-ink transition-all ${
+              isMenuOpen ? "-translate-y-1 -rotate-45" : ""
+            }`}
           />
         </button>
       </div>

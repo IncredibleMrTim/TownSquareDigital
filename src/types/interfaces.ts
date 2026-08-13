@@ -68,6 +68,12 @@ export interface INavLink {
   href: string
 }
 
+export interface ISocialLink {
+  platform: "facebook"
+  label: string
+  href: string
+}
+
 export interface IWorkExample {
   name: string
   url?: string

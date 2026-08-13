@@ -7,8 +7,12 @@ export default function Testimonials() {
     <section className="bg-cream px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 text-center">
-          <h2 className="mb-4 font-display text-4xl font-bold text-brand-navy">What our clients say</h2>
-          <p className="text-lg text-stone">Real feedback from real tradespeople.</p>
+          <h2 className="mb-4 font-display text-4xl font-bold text-brand-navy">
+            What our clients say
+          </h2>
+          <p className="text-lg text-stone">
+            Real feedback from real tradespeople.
+          </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {TESTIMONIALS.map((testimonial) => (
@@ -31,7 +35,9 @@ export default function Testimonials() {
                   {testimonial.initials}
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-ink">{testimonial.name}</div>
+                  <div className="text-sm font-semibold text-ink">
+                    {testimonial.name}
+                  </div>
                   <div className="text-xs text-muted">{testimonial.trade}</div>
                 </div>
               </div>

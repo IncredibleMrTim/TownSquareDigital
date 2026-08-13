@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { SERVICES } from "@/data/content";
-import { IMG_HAPPY_WORKER } from "@/lib/theme";
+import Image from "next/image"
+import { SERVICES } from "@/data/content"
+import { IMG_HAPPY_WORKER } from "@/lib/theme"
 
 export default function Services() {
   return (
@@ -45,5 +45,5 @@ export default function Services() {
         </div>
       </div>
     </section>
-  );
+  )
 }

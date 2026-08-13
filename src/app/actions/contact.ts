@@ -1,9 +1,14 @@
 "use server"
 
 import nodemailer from "nodemailer"
-import type { IContactFormValues, IContactSubmissionResult } from "@/types/interfaces"
+import { contactFormSchema } from "@/lib/contactFormSchema"
+import type {
+  IContactFormValues,
+  IContactSubmissionResult,
+} from "@/types/interfaces"
 
-const GENERIC_ERROR_MESSAGE = "Something went wrong sending your message. Please try again or call us directly."
+const GENERIC_ERROR_MESSAGE =
+  "Something went wrong sending your message. Please try again or call us directly."
 
 function buildEmailBody(formValues: IContactFormValues): string {
   return [
@@ -31,13 +36,21 @@ function buildConfirmationEmailBody(formValues: IContactFormValues): string {
   ].join("\n")
 }
 
-function isMissingRequiredField(formValues: IContactFormValues): boolean {
-  return !formValues.name.trim() || !formValues.email.trim() || !formValues.message.trim()
-}
+export async function sendContactMessage(
+  formValues: IContactFormValues,
+  honeypot?: string,
+): Promise<IContactSubmissionResult> {
+  if (honeypot) {
+    return { isSuccess: true }
+  }
 
-export async function sendContactMessage(formValues: IContactFormValues): Promise<IContactSubmissionResult> {
-  if (isMissingRequiredField(formValues)) {
-    return { isSuccess: false, errorMessage: "Please fill in your name, email, and message." }
+  const parsedFormValues = contactFormSchema.safeParse(formValues)
+  if (!parsedFormValues.success) {
+    return {
+      isSuccess: false,
+      errorMessage:
+        parsedFormValues.error.issues[0]?.message ?? GENERIC_ERROR_MESSAGE,
+    }
   }
 
   const smtpHost = process.env.SMTP_HOST
@@ -45,7 +58,9 @@ export async function sendContactMessage(formValues: IContactFormValues): Promis
   const smtpPassword = process.env.SMTP_PASSWORD
 
   if (!smtpHost || !smtpUser || !smtpPassword) {
-    console.error("sendContactMessage: missing SMTP_HOST, SMTP_USER, or SMTP_PASSWORD env vars")
+    console.error(
+      "sendContactMessage: missing SMTP_HOST, SMTP_USER, or SMTP_PASSWORD env vars",
+    )
     return { isSuccess: false, errorMessage: GENERIC_ERROR_MESSAGE }
   }
 
@@ -65,9 +80,9 @@ export async function sendContactMessage(formValues: IContactFormValues): Promis
     await transporter.sendMail({
       from: fromEmail,
       to: process.env.CONTACT_TO_EMAIL ?? "hello@townsquaredigital.co.uk",
-      replyTo: formValues.email,
-      subject: `New quote request from ${formValues.name}`,
-      text: buildEmailBody(formValues),
+      replyTo: parsedFormValues.data.email,
+      subject: `New quote request from ${parsedFormValues.data.name}`,
+      text: buildEmailBody(parsedFormValues.data),
     })
   } catch (error) {
     console.error("sendContactMessage:", error)
@@ -77,9 +92,9 @@ export async function sendContactMessage(formValues: IContactFormValues): Promis
   try {
     await transporter.sendMail({
       from: fromEmail,
-      to: formValues.email,
+      to: parsedFormValues.data.email,
       subject: "We've received your message — Town Square Digital",
-      text: buildConfirmationEmailBody(formValues),
+      text: buildConfirmationEmailBody(parsedFormValues.data),
     })
   } catch (error) {
     console.error("sendContactMessage: confirmation email failed:", error)

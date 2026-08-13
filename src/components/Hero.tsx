@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { HERO_BADGES } from "@/data/content";
-import { IMG_HERO } from "@/lib/theme";
+import Image from "next/image"
+import { HERO_BADGES } from "@/data/content"
+import { IMG_HERO } from "@/lib/theme"
 
 export default function Hero() {
   return (
@@ -76,5 +76,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

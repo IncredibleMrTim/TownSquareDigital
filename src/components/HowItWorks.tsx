@@ -5,9 +5,12 @@ export default function HowItWorks() {
     <section id="how-it-works" className="bg-cream px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 text-center">
-          <h2 className="mb-4 font-display text-4xl font-bold text-brand-navy">Simple as a phone call</h2>
+          <h2 className="mb-4 font-display text-4xl font-bold text-brand-navy">
+            Simple as a phone call
+          </h2>
           <p className="mx-auto max-w-xl text-lg text-stone">
-            You don&apos;t need to know anything about websites — that&apos;s my job. Here&apos;s how it works.
+            You don&apos;t need to know anything about websites — that&apos;s my
+            job. Here&apos;s how it works.
           </p>
         </div>
         <div className="relative grid gap-8 md:grid-cols-3">
@@ -23,7 +26,9 @@ export default function HowItWorks() {
               >
                 {step.num}
               </div>
-              <h3 className="mb-3 font-display text-xl font-semibold text-ink">{step.title}</h3>
+              <h3 className="mb-3 font-display text-xl font-semibold text-ink">
+                {step.title}
+              </h3>
               <p className="text-sm leading-relaxed text-stone">{step.body}</p>
             </div>
           ))}

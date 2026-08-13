@@ -1,5 +1,10 @@
-import { NAV_LINKS } from "@/data/content"
+import { NAV_LINKS, SOCIAL_LINKS } from "@/data/content"
+import FacebookIcon from "./FacebookIcon"
 import LogoMark from "./LogoMark"
+
+const SOCIAL_ICONS = {
+  facebook: FacebookIcon,
+}
 
 export default function Footer() {
   return (
@@ -18,16 +23,39 @@ export default function Footer() {
             </div>
           </div>
           <p className="max-w-xs text-sm leading-relaxed">
-            Affordable, professional websites for tradespeople and small businesses across the UK.
+            Affordable, professional websites for tradespeople and small
+            businesses across the UK.
           </p>
-          <p className="mt-3 text-xs text-[#4a6080] italic">Where local business meets digital.</p>
+          <p className="mt-3 text-xs text-[#4a6080] italic">
+            Where local business meets digital.
+          </p>
+          <div className="mt-4 flex items-center gap-3">
+            {SOCIAL_LINKS.map((socialLink) => {
+              const SocialIcon = SOCIAL_ICONS[socialLink.platform]
+              return (
+                <a
+                  key={socialLink.platform}
+                  href={socialLink.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={socialLink.label}
+                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-brick text-white transition-opacity hover:opacity-80"
+                >
+                  <SocialIcon size={20} />
+                </a>
+              )
+            })}
+          </div>
         </div>
         <div>
           <div className="mb-3 text-sm font-medium text-white">Navigate</div>
           <ul className="space-y-2 text-sm">
             {NAV_LINKS.map((navLink) => (
               <li key={navLink.label}>
-                <a href={navLink.href} className="transition-colors hover:text-white">
+                <a
+                  href={navLink.href}
+                  className="transition-colors hover:text-white"
+                >
                   {navLink.label}
                 </a>
               </li>
@@ -37,7 +65,8 @@ export default function Footer() {
         <div>
           <div className="mb-3 text-sm font-medium text-white">Contact</div>
           <p className="max-w-xs text-sm leading-relaxed">
-            Contact Town Square Digital today to place your order or learn more about our services.
+            Contact Town Square Digital today to place your order or learn more
+            about our services.
           </p>
           <p className="mt-2 text-sm">
             Email:{" "}

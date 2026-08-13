@@ -15,7 +15,9 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(ORGANIZATION_SCHEMA),
+        }}
       />
       <Navbar />
       <main>

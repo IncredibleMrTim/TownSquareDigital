@@ -11,6 +11,7 @@ import type {
   INavLink,
   IPricingPlan,
   IService,
+  ISocialLink,
   IStep,
   ITestimonial,
   IWorkExample,
@@ -353,6 +354,14 @@ export const CONTACT_FORM_FIELDS: IContactFormField[] = [
     type: "tel",
     placeholder: "07700 000000",
     isRequired: false,
+  },
+]
+
+export const SOCIAL_LINKS: ISocialLink[] = [
+  {
+    platform: "facebook",
+    label: "Facebook",
+    href: "https://www.facebook.com/townsquaredigital.local",
   },
 ]
 

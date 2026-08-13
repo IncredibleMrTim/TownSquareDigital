@@ -6,7 +6,8 @@ import { WORK_BREADCRUMB_SCHEMA } from "@/data/content"
 
 export const metadata: Metadata = {
   title: "Our Work — Town Square Digital",
-  description: "A few of the sites Town Square Digital has built for tradespeople and small businesses.",
+  description:
+    "A few of the sites Town Square Digital has built for tradespeople and small businesses.",
   alternates: {
     canonical: "/work",
   },
@@ -17,7 +18,9 @@ export default function WorkPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(WORK_BREADCRUMB_SCHEMA) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(WORK_BREADCRUMB_SCHEMA),
+        }}
       />
       <Navbar />
       <main className="pt-16">

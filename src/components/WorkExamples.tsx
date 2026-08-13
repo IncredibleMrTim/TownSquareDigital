@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { WORK_EXAMPLES } from "@/data/content";
+import Image from "next/image"
+import { WORK_EXAMPLES } from "@/data/content"
 
 export default function WorkExamples() {
   return (
@@ -55,5 +55,5 @@ export default function WorkExamples() {
         </div>
       </div>
     </section>
-  );
+  )
 }
