@@ -69,7 +69,7 @@ export interface INavLink {
 }
 
 export interface ISocialLink {
-  platform: "facebook"
+  platform: "facebook" | "linkedin"
   label: string
   href: string
 }

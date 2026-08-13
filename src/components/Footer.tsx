@@ -1,9 +1,11 @@
 import { NAV_LINKS, SOCIAL_LINKS } from "@/data/content"
 import FacebookIcon from "./FacebookIcon"
+import LinkedInIcon from "./LinkedInIcon"
 import LogoMark from "./LogoMark"
 
 const SOCIAL_ICONS = {
   facebook: FacebookIcon,
+  linkedin: LinkedInIcon,
 }
 
 export default function Footer() {

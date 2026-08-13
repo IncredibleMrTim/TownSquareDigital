@@ -42,7 +42,10 @@ export const ORGANIZATION_SCHEMA = {
         "@type": "Country",
         name: "United Kingdom",
       },
-      sameAs: ["https://www.facebook.com/townsquaredigital.local"],
+      sameAs: [
+        "https://www.facebook.com/townsquaredigital.local",
+        "https://www.linkedin.com/company/town-square-digital",
+      ],
     },
     {
       "@type": "WebSite",
@@ -378,6 +381,11 @@ export const SOCIAL_LINKS: ISocialLink[] = [
     platform: "facebook",
     label: "Facebook",
     href: "https://www.facebook.com/townsquaredigital.local",
+  },
+  {
+    platform: "linkedin",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/town-square-digital",
   },
 ]
 
