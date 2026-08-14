@@ -26,7 +26,8 @@ export default function Footer() {
           </div>
           <p className="max-w-xs text-sm leading-relaxed">
             Affordable, professional websites for tradespeople and small
-            businesses across the UK.
+            businesses in Gosport, Portsmouth, Southampton, Fareham and
+            surrounding areas — plus UK-wide.
           </p>
           <p className="mt-3 text-xs text-[#4a6080] italic">
             Where local business meets digital.

@@ -21,9 +21,9 @@ const outfit = Outfit({
 })
 
 const SITE_TITLE =
-  "Town Square Digital UK — Affordable Websites for Tradespeople & Small Businesses"
+  "Town Square Digital — Web Design for Gosport, Portsmouth, Southampton & Fareham"
 const SITE_DESCRIPTION =
-  "UK web design for tradespeople and small businesses. Affordable, professional websites live in days, not weeks — no hidden fees, no agency contracts."
+  "Affordable website design for tradespeople and small businesses in Gosport (PO13), Portsmouth, Southampton, Fareham and the surrounding areas — plus UK-wide. Live in days, not weeks, no hidden fees."
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.townsquaredigital.co.uk"),

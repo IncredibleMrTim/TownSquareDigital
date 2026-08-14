@@ -14,12 +14,17 @@ export default function Hero() {
             Your website. How you want it.{" "}
             <em className="text-brand-brick not-italic">No surprises.</em>
           </h1>
-          <p className="mb-8 text-lg leading-relaxed text-stone">
+          <p className="mb-4 text-lg leading-relaxed text-stone">
             I&apos;ve heard the same story from trades and small businesses time
             and again — big agency promises, amazing pitch, then a price tag
             that&apos;s just too high. I started Town Square Digital to change
             that. Simple websites, only the features you actually need, at a
             price that makes sense.
+          </p>
+          <p className="mb-8 text-sm text-muted">
+            Based in Gosport (PO13), serving tradespeople and small
+            businesses across Gosport, Portsmouth, Southampton, Fareham and
+            the surrounding areas — plus UK-wide.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a

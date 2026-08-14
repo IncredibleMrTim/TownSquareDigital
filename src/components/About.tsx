@@ -34,6 +34,12 @@ export default function About() {
             shot. No big promises, no overpriced packages. Just your website,
             how you want it.
           </p>
+          <p className="mb-8 text-base leading-relaxed text-navy-mist">
+            I&apos;m based in Gosport, Hampshire, and work with tradespeople
+            and small businesses throughout Gosport, Portsmouth, Southampton,
+            Fareham and the surrounding areas — with clients further afield
+            across the UK too.
+          </p>
           <div className="grid grid-cols-3 gap-6">
             {ABOUT_STATS.map((stat) => (
               <div key={stat.label}>

@@ -31,17 +31,22 @@ export const ORGANIZATION_SCHEMA = {
       logo: "https://www.townsquaredigital.co.uk/logo.png",
       image: "https://www.townsquaredigital.co.uk/logo.png",
       description:
-        "Town Square Digital designs and builds affordable, professional websites for tradespeople and small businesses across the UK.",
+        "Town Square Digital designs and builds affordable, professional websites for tradespeople and small businesses in Gosport (PO13), Portsmouth, Southampton, Fareham and the surrounding areas, as well as across the UK.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Gosport",
         addressRegion: "Hampshire",
+        postalCode: "PO13",
         addressCountry: "GB",
       },
-      areaServed: {
-        "@type": "Country",
-        name: "United Kingdom",
-      },
+      areaServed: [
+        { "@type": "City", name: "Gosport" },
+        { "@type": "City", name: "Portsmouth" },
+        { "@type": "City", name: "Southampton" },
+        { "@type": "City", name: "Fareham" },
+        { "@type": "AdministrativeArea", name: "Hampshire" },
+        { "@type": "Country", name: "United Kingdom" },
+      ],
       sameAs: [
         "https://www.facebook.com/townsquaredigital.local",
         "https://www.linkedin.com/company/town-square-digital",
@@ -87,6 +92,14 @@ export const ORGANIZATION_SCHEMA = {
           acceptedAnswer: {
             "@type": "Answer",
             text: "Small businesses in the UK can benefit from tailored digital marketing strategies that increase online visibility, attract more customers, and improve sales through Town Square Digital's expert services.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What areas does Town Square Digital cover?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Town Square Digital is based in Gosport (PO13) and works with tradespeople and small businesses across Gosport, Portsmouth, Southampton, Fareham and the surrounding Hampshire areas. Since website design and support can be delivered remotely, we also take on clients across the rest of the UK.",
           },
         },
         {
