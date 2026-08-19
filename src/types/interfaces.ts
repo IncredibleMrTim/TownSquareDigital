@@ -25,6 +25,8 @@ export interface ITestimonial {
 export interface IPricingPlan {
   name: string
   price: string
+  originalPrice?: string
+  discountLabel?: string
   period: string
   desc: string
   features: string[]

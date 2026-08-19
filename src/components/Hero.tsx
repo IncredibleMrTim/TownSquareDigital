@@ -5,8 +5,8 @@ import { IMG_HERO } from "@/lib/theme"
 export default function Hero() {
   return (
     <section id="services" className="bg-cream px-6 pt-32 pb-24">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
-        <div>
+      <div className="mx-auto flex max-w-6xl flex-col gap-12 md:flex-row md:items-start">
+        <div className="flex-1">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-cream-dark px-3 py-1.5 text-xs font-semibold tracking-widest text-brand-navy uppercase">
             Built for the little guy
           </div>
@@ -22,9 +22,9 @@ export default function Hero() {
             price that makes sense.
           </p>
           <p className="mb-8 text-sm text-muted">
-            Based in Gosport (PO13), serving tradespeople and small
-            businesses across Gosport, Portsmouth, Southampton, Fareham and
-            the surrounding areas — plus UK-wide.
+            Based in Gosport (PO13), serving tradespeople and small businesses
+            across Gosport, Portsmouth, Southampton, Fareham and the surrounding
+            areas — plus UK-wide.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
@@ -53,16 +53,39 @@ export default function Hero() {
               </div>
             ))}
           </div>
+          <div className="mt-8 rounded-xl px-6 py-5 flex items-center gap-5 border-2 bg-brand-navy border-brand-brick">
+            <div className="text-3xl shrink-0">🎉</div>
+            <div>
+              <div
+                className="text-xs font-bold uppercase tracking-widest mb-1"
+                style={{ color: "#f5c5b0" }}
+              >
+                Limited Offer
+              </div>
+              <p className="text-white font-semibold text-base leading-snug">
+                Save <span style={{ color: "#f5c5b0" }}>20%</span> on any
+                website package when you add a Care Plan at the same time.
+              </p>
+              <a
+                href="#pricing"
+                className="inline-block mt-2 text-sm font-semibold underline underline-offset-2 hover:opacity-80 transition-opacity"
+                style={{ color: "#f5c5b0" }}
+              >
+                View plans & pricing →
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div className="relative">
-          <div className="relative h-95 overflow-hidden rounded-2xl shadow-[0_24px_60px_rgba(27,51,88,0.16)]">
+        <div className="relative flex-1 md:mt-13">
+          <div className="flex relative h-95 overflow-hidden rounded-2xl shadow-[0_24px_60px_rgba(27,51,88,0.16)]">
             <Image
               src={IMG_HERO}
               alt="Tradesperson at work — the kind of local business Town Square Digital helps get online"
               fill
               sizes="(min-width: 768px) 560px, 100vw"
               className="object-cover"
+              loading="eager"
             />
             <div className="absolute inset-0 rounded-2xl bg-[linear-gradient(to_top,rgba(27,51,88,0.33),transparent)]" />
           </div>
