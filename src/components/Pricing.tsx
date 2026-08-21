@@ -1,5 +1,8 @@
+"use client"
+
 import Link from "next/link"
 import { PRICING } from "@/data/content"
+import { trackGAClick } from "@/lib/analytics"
 
 export default function Pricing() {
   return (
@@ -96,6 +99,12 @@ export default function Pricing() {
               </ul>
               <Link
                 href="/contact"
+                onClick={() =>
+                  trackGAClick("cta_click", {
+                    button_name: "get_started",
+                    plan_name: plan.name,
+                  })
+                }
                 className={`w-full rounded-lg py-3 text-center text-sm font-semibold text-white transition-opacity hover:opacity-90 ${
                   plan.highlight ? "bg-brand-brick" : "bg-brand-navy"
                 }`}

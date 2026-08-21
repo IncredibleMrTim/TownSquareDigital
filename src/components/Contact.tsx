@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react"
 import { sendContactMessage } from "@/app/actions/contact"
 import { CONTACT_DETAILS, CONTACT_FORM_FIELDS } from "@/data/content"
+import { trackGAClick } from "@/lib/analytics"
 import { contactFormSchema } from "@/lib/contactFormSchema"
 import type { IContactFormValues } from "@/types/interfaces"
 import LogoMark from "./LogoMark"
@@ -70,6 +71,7 @@ export default function Contact() {
 
     setIsSending(false)
     if (result.isSuccess) {
+      trackGAClick("form_submit", { form_name: "contact" })
       setIsSubmitted(true)
     } else {
       setErrorMessage(
