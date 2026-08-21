@@ -62,7 +62,7 @@ export default function Contact() {
     }`
   }
 
-  async function handleSubmit(event: React.FormEvent) {
+  async function handleSubmit(event: React.SubmitEvent) {
     event.preventDefault()
     setIsSending(true)
     setErrorMessage(null)
@@ -71,7 +71,7 @@ export default function Contact() {
 
     setIsSending(false)
     if (result.isSuccess) {
-      trackGAClick("form_submit", { form_name: "contact" })
+      trackGAClick("tsd_contact_form_submit", { form_name: "contact" })
       setIsSubmitted(true)
     } else {
       setErrorMessage(

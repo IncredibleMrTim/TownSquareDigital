@@ -100,7 +100,7 @@ export default function Pricing() {
               <Link
                 href="/contact"
                 onClick={() =>
-                  trackGAClick("cta_click", {
+                  trackGAClick("tsd_cta_click", {
                     button_name: "get_started",
                     plan_name: plan.name,
                   })

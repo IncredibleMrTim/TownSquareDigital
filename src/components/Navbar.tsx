@@ -7,7 +7,7 @@ import { trackGAClick } from "@/lib/analytics"
 import LogoMark from "./LogoMark"
 
 function trackNavLinkClick(label: string) {
-  trackGAClick("nav_click", { nav_item: label })
+  trackGAClick("tsd_nav_click", { nav_item: label })
 }
 
 export default function Navbar() {
