@@ -37,7 +37,7 @@ export default function Pricing() {
               >
                 {plan.name}
               </div>
-              <div className="mb-1 flex items-end gap-1">
+              <div className="mb-1 flex items-end gap-1.5">
                 <span
                   className={`font-display text-4xl font-bold ${
                     plan.highlight ? "text-white" : "text-brand-navy"
@@ -45,6 +45,15 @@ export default function Pricing() {
                 >
                   {plan.price}
                 </span>
+                {plan.originalPrice && (
+                  <span
+                    className={`mb-1 text-lg line-through ${
+                      plan.highlight ? "text-navy-mist" : "text-muted"
+                    }`}
+                  >
+                    {plan.originalPrice}
+                  </span>
+                )}
                 <span
                   className={`mb-1.5 text-sm ${
                     plan.highlight ? "text-navy-mist" : "text-muted"
@@ -53,6 +62,11 @@ export default function Pricing() {
                   {plan.period}
                 </span>
               </div>
+              {plan.discountLabel && (
+                <div className="mb-6 w-full rounded-lg bg-brand-brick py-2 text-center text-xs font-bold tracking-widest text-white uppercase">
+                  {plan.discountLabel}
+                </div>
+              )}
               <p
                 className={`mb-6 text-sm ${
                   plan.highlight ? "text-[#c8d8ea]" : "text-muted"

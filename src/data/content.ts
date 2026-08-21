@@ -308,7 +308,9 @@ export const TESTIMONIALS: ITestimonial[] = [
 export const PRICING: IPricingPlan[] = [
   {
     name: "Starter",
-    price: "£299",
+    price: "£239",
+    originalPrice: "£299",
+    discountLabel: "20% off with Care Plan",
     period: "one-off",
     desc: "Perfect for getting online fast.",
     features: [
@@ -322,7 +324,9 @@ export const PRICING: IPricingPlan[] = [
   },
   {
     name: "Professional",
-    price: "£549",
+    price: "£439",
+    originalPrice: "£549",
+    discountLabel: "20% off with Care Plan",
     period: "one-off",
     desc: "Everything you need to look great and get found.",
     features: [
