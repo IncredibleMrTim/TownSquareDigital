@@ -142,13 +142,13 @@ export const ORGANIZATION_SCHEMA = {
       name: "Starter Website Package",
       description:
         "Perfect for getting online fast. Up to 4 pages, mobile-friendly design, contact form, and Google Maps integration.",
-      url: "https://www.townsquaredigital.co.uk/#pricing",
+      url: "https://www.townsquaredigital.co.uk/pricing",
       offers: {
         "@type": "Offer",
         price: "299",
         priceCurrency: "GBP",
         availability: "https://schema.org/InStock",
-        url: "https://www.townsquaredigital.co.uk/#pricing",
+        url: "https://www.townsquaredigital.co.uk/pricing",
       },
     },
     {
@@ -157,13 +157,13 @@ export const ORGANIZATION_SCHEMA = {
       name: "Professional Website Package",
       description:
         "Everything you need to look great and get found. Up to 8 pages, custom design, SEO setup, and Google My Business listing.",
-      url: "https://www.townsquaredigital.co.uk/#pricing",
+      url: "https://www.townsquaredigital.co.uk/pricing",
       offers: {
         "@type": "Offer",
         price: "549",
         priceCurrency: "GBP",
         availability: "https://schema.org/InStock",
-        url: "https://www.townsquaredigital.co.uk/#pricing",
+        url: "https://www.townsquaredigital.co.uk/pricing",
       },
     },
     {
@@ -172,44 +172,71 @@ export const ORGANIZATION_SCHEMA = {
       name: "Care Plan",
       description:
         "Your site looked after, every single month. Managed hosting, unlimited small content updates, and monthly site health checks.",
-      url: "https://www.townsquaredigital.co.uk/#pricing",
+      url: "https://www.townsquaredigital.co.uk/pricing",
       offers: {
         "@type": "Offer",
         price: "49",
         priceCurrency: "GBP",
         availability: "https://schema.org/InStock",
-        url: "https://www.townsquaredigital.co.uk/#pricing",
+        url: "https://www.townsquaredigital.co.uk/pricing",
       },
     },
   ],
 }
 
-export const WORK_BREADCRUMB_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.townsquaredigital.co.uk",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Our Work",
-      item: "https://www.townsquaredigital.co.uk/work",
-    },
-  ],
+/**
+ * Builds a two-level BreadcrumbList schema (Home -> page) for a top-level route.
+ */
+function buildBreadcrumbSchema(pageName: string, pagePath: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.townsquaredigital.co.uk",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: pageName,
+        item: `https://www.townsquaredigital.co.uk${pagePath}`,
+      },
+    ],
+  }
 }
 
+export const WORK_BREADCRUMB_SCHEMA = buildBreadcrumbSchema(
+  "Our Work",
+  "/work",
+)
+export const SERVICES_BREADCRUMB_SCHEMA = buildBreadcrumbSchema(
+  "Services",
+  "/services",
+)
+export const PRICING_BREADCRUMB_SCHEMA = buildBreadcrumbSchema(
+  "Pricing",
+  "/pricing",
+)
+export const HOW_IT_WORKS_BREADCRUMB_SCHEMA = buildBreadcrumbSchema(
+  "How It Works",
+  "/how-it-works",
+)
+export const ABOUT_BREADCRUMB_SCHEMA = buildBreadcrumbSchema("About", "/about")
+export const CONTACT_BREADCRUMB_SCHEMA = buildBreadcrumbSchema(
+  "Contact",
+  "/contact",
+)
+
 export const NAV_LINKS: INavLink[] = [
-  { label: "Services", href: "/#services" },
-  { label: "Pricing", href: "/#pricing" },
-  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "How It Works", href: "/how-it-works" },
   { label: "Our Work", href: "/work" },
-  { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ]
 
 export const HERO_BADGES = [

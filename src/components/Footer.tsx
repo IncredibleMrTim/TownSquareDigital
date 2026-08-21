@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { NAV_LINKS, SOCIAL_LINKS } from "@/data/content"
 import FacebookIcon from "./FacebookIcon"
 import LinkedInIcon from "./LinkedInIcon"
@@ -55,12 +56,12 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {NAV_LINKS.map((navLink) => (
               <li key={navLink.label}>
-                <a
+                <Link
                   href={navLink.href}
                   className="transition-colors hover:text-white"
                 >
                   {navLink.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

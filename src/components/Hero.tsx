@@ -1,10 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 import { HERO_BADGES } from "@/data/content"
 import { IMG_HERO } from "@/lib/theme"
 
 export default function Hero() {
   return (
-    <section id="services" className="bg-cream px-6 pt-32 pb-24">
+    <section className="bg-cream px-6 pt-32 pb-24">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 md:flex-row md:items-start">
         <div className="flex-1">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-cream-dark px-3 py-1.5 text-xs font-semibold tracking-widest text-brand-navy uppercase">
@@ -27,18 +28,18 @@ export default function Hero() {
             areas — plus UK-wide.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="inline-flex items-center justify-center rounded-lg bg-brand-brick px-7 py-3.5 text-base font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get your free quote →
-            </a>
-            <a
-              href="#how-it-works"
+            </Link>
+            <Link
+              href="/how-it-works"
               className="inline-flex items-center justify-center rounded-lg border border-[#c8bfad] px-7 py-3.5 text-base font-medium text-ink"
             >
               See how it works
-            </a>
+            </Link>
           </div>
           <div className="mt-8 flex flex-wrap gap-6">
             {HERO_BADGES.map((badge) => (
@@ -66,13 +67,13 @@ export default function Hero() {
                 Save <span style={{ color: "#f5c5b0" }}>20%</span> on any
                 website package when you add a Care Plan at the same time.
               </p>
-              <a
-                href="#pricing"
+              <Link
+                href="/pricing"
                 className="inline-block mt-2 text-sm font-semibold underline underline-offset-2 hover:opacity-80 transition-opacity"
                 style={{ color: "#f5c5b0" }}
               >
                 View plans & pricing →
-              </a>
+              </Link>
             </div>
           </div>
         </div>
