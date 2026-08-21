@@ -3,7 +3,12 @@
 import { useState } from "react"
 import Link from "next/link"
 import { NAV_LINKS } from "@/data/content"
+import { trackGAClick } from "@/lib/analytics"
 import LogoMark from "./LogoMark"
+
+function trackNavLinkClick(label: string) {
+  trackGAClick("nav_click", { nav_item: label })
+}
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -28,6 +33,7 @@ export default function Navbar() {
             <Link
               key={navLink.label}
               href={navLink.href}
+              onClick={() => trackNavLinkClick(navLink.label)}
               className="text-sm font-medium text-stone transition-colors hover:opacity-70"
             >
               {navLink.label}
@@ -37,6 +43,7 @@ export default function Navbar() {
 
         <Link
           href="/contact"
+          onClick={() => trackNavLinkClick("Get a free quote")}
           className="hidden items-center rounded-lg bg-brand-brick px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
         >
           Get a free quote
@@ -73,7 +80,10 @@ export default function Navbar() {
               key={navLink.label}
               href={navLink.href}
               className="py-1 text-sm font-medium text-stone"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {
+                trackNavLinkClick(navLink.label)
+                setIsMenuOpen(false)
+              }}
             >
               {navLink.label}
             </Link>
@@ -81,7 +91,10 @@ export default function Navbar() {
           <Link
             href="/contact"
             className="inline-flex justify-center rounded-lg bg-brand-brick px-5 py-3 text-sm font-semibold text-white"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              trackNavLinkClick("Get a free quote")
+              setIsMenuOpen(false)
+            }}
           >
             Get a free quote
           </Link>
