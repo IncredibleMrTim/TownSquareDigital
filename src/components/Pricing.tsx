@@ -1,8 +1,9 @@
+import Link from "next/link"
 import { PRICING } from "@/data/content"
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-cream-dark px-6 py-20">
+    <section className="bg-cream-dark px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 text-center">
           <h2 className="mb-4 font-display text-4xl font-bold text-brand-navy">
@@ -93,25 +94,25 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className={`w-full rounded-lg py-3 text-center text-sm font-semibold text-white transition-opacity hover:opacity-90 ${
                   plan.highlight ? "bg-brand-brick" : "bg-brand-navy"
                 }`}
               >
                 Get started
-              </a>
+              </Link>
             </div>
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-muted">
           Not sure which plan?{" "}
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="font-medium text-brand-navy underline underline-offset-2"
           >
             Drop me a message
-          </a>{" "}
+          </Link>{" "}
           and we&apos;ll work it out together.
         </p>
       </div>
